@@ -1,4 +1,4 @@
-== README
+# CoffeeAPP
 
 This is my first application to manage which coffeeshop I should visit to work remotely today by Shane Sareli
 
