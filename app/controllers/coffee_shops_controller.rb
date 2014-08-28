@@ -5,6 +5,10 @@ class CoffeeShopsController < ApplicationController
   # GET /coffee_shops.json
   def index
     @coffee_shops = CoffeeShop.all
+
+    #get randome value as a string
+    @coffee_shop_random = [*1..@coffee_shops.length].sample.to_s
+
   end
 
   # GET /coffee_shops/1
@@ -15,6 +19,15 @@ class CoffeeShopsController < ApplicationController
   # GET /coffee_shops/new
   def new
     @coffee_shop = CoffeeShop.new
+  end
+
+  # GET /coffee_shops/random
+  def random_shop
+    random_list = []
+    random_list = @coffee_shop.values
+    puts random_list[rand(random_list.length)]
+    random_coffee_shop = random_list[0]
+    #@coffee_shop = CoffeeShop.random
   end
 
   # GET /coffee_shops/1/edit

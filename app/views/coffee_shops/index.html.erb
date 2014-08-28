@@ -1,5 +1,11 @@
 <h1>Listing coffee_shops</h1>
 
+
+<%= link_to 'Give me a Random Coffee shop', 'coffee_shops/'+@coffee_shop_random %>
+
+<br>
+<br>
+
 <table>
   <thead>
     <tr>
@@ -25,3 +31,5 @@
 <br>
 
 <%= link_to 'New Coffee shop', new_coffee_shop_path %>
+
+<%= link_to 'Give me a Random Coffee shop', @coffee_shop_random %>
