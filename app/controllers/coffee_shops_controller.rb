@@ -1,6 +1,8 @@
 class CoffeeShopsController < ApplicationController
   before_action :set_coffee_shop, only: [:show, :edit, :update, :destroy]
 
+require 'uri'
+
   # GET /coffee_shops
   # GET /coffee_shops.json
   def index
