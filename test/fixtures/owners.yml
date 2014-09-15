@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tasks_id: 
+  name: MyString
+  email: MyString
+  password: MyString
+  favorite_id: 
+
+two:
+  tasks_id: 
+  name: MyString
+  email: MyString
+  password: MyString
+  favorite_id: 

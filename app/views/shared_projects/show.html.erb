@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @shared_project.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @shared_project.description %>
+</p>
+
+<%= link_to 'Edit', edit_shared_project_path(@shared_project) %> |
+<%= link_to 'Back', shared_projects_path %>

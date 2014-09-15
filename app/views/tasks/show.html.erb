@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task list:</strong>
+  <%= @task.task_list %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @task.comments %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @task.priority %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @task.owner %>
+</p>
+
+<p>
+  <strong>Due:</strong>
+  <%= @task.due %>
+</p>
+
+<p>
+  <strong>Due repeat:</strong>
+  <%= @task.due_repeat %>
+</p>
+
+<p>
+  <strong>Reminder:</strong>
+  <%= @task.reminder %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @task.notes %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @task.location %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @task.duration %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @task.type %>
+</p>
+
+<p>
+  <strong>Timeframe:</strong>
+  <%= @task.timeframe %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @task.category %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

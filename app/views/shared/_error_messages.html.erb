@@ -1,0 +1,12 @@
+<% if @owner.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-error">
+      	<%= pluralize(@owner.errors.count, "error") %> prohibited this owner from being saved:
+      </div>
+      <ul>
+      <% @owner.errors.full_messages.each do |message| %>
+        <li>* <%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>

@@ -1,0 +1,27 @@
+<h1>Listing shared_projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shared_projects.each do |shared_project| %>
+      <tr>
+        <td><%= shared_project.name %></td>
+        <td><%= shared_project.description %></td>
+        <td><%= link_to 'Show', shared_project %></td>
+        <td><%= link_to 'Edit', edit_shared_project_path(shared_project) %></td>
+        <td><%= link_to 'Destroy', shared_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shared project', new_shared_project_path %>

@@ -1,0 +1,1 @@
+json.extract! @task, :id, :task_list_id, :comments_id, :priority, :title, :owner_id, :due, :due_repeat, :reminder, :notes, :status, :location, :duration, :type, :timeframe, :category, :created_at, :updated_at

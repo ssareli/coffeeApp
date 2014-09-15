@@ -1,0 +1,27 @@
+<h1>Listing assigned_tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Owner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assigned_tasks.each do |assigned_task| %>
+      <tr>
+        <td><%= assigned_task.task %></td>
+        <td><%= assigned_task.owner %></td>
+        <td><%= link_to 'Show', assigned_task %></td>
+        <td><%= link_to 'Edit', edit_assigned_task_path(assigned_task) %></td>
+        <td><%= link_to 'Destroy', assigned_task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assigned task', new_assigned_task_path %>

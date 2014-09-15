@@ -1,8 +1,23 @@
 Rails.application.routes.draw do
   resources :coffee_shops  
 
-  #get 'coffee_shop/random_shop'
+  resources :projects
+  resources :shared_projects
+  resources :task_lists
+  resources :tasks 
+  resources :favorites
+  resources :owners
+  resources :assigned_tasks
+  resources :assigned_owners
+  resources :comments
+  resources :smart_lists
+  resources :sessions, only: [:new, :create, :destroy]
 
+  root 'smart_lists#index'
+
+  match '/signup', to: 'owners#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
